@@ -30,6 +30,7 @@ const Home = ({ navigation }) => {
     }]
 
     const [value, setValue] = useState("")
+    console.log(value);
     return (
         <View style={styles.container}>
             {/* EJEMPLO COMPONENTES INICIO */}
@@ -50,6 +51,7 @@ const Home = ({ navigation }) => {
             <Button
                 title="+"
                 onPress={navegacionAddplace}
+
             />
 
             <FlatList
