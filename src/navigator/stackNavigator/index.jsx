@@ -10,36 +10,38 @@ const Stack = createStackNavigator()
 
 const StackNavigator = () => {
 
-  return (
+    return (
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen
                 name="Home"
                 component={Home}
                 options={
-                    ({navigation})=>({headerRight:()=>
-                    <Ionicons 
-                    name="md-add-circle" 
-                    size={24} 
-                    color="#0079FF" 
-                    onPress={() => navigation.navigate("AddPlace")}
-                    />})
+                    ({ navigation }) => ({
+                        headerRight: () =>
+                            <Ionicons
+                                name="md-add-circle"
+                                size={24}
+                                color="#0079FF"
+                                onPress={() => navigation.navigate("AddPlace")}
+                            />
+                    })
                 }
             />
             <Stack.Screen
                 name="AddPlace"
                 component={AddPlace}
-                // options=""
+            // options=""
             />
             <Stack.Screen
                 name="Detail"
                 component={Detail}
-                // options=""
+            // options=""
             />
         </Stack.Navigator>
-    // <View>
-    //     <Text>Hola</Text>
-    // </View>
-  )
+        // <View>
+        //     <Text>Hola</Text>
+        // </View>
+    )
 }
 
 export default StackNavigator
