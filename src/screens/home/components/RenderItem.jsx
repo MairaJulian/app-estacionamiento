@@ -3,10 +3,16 @@ import React from 'react'
 import Card from '../../../components/Card'
 
 
-const RenderItem = ({ item }) => {
+const RenderItem = ({ item, navegacionDetail }) => {
+    
+    const handlePress = () => {
+        navegacionDetail()
+    }
+
     return (
         <Card sombra_low_or_high='low' >
-            <TouchableOpacity style={styles.contain}>
+            {/* <TouchableOpacity style={styles.contain} > */}
+            <TouchableOpacity style={styles.contain} onPress={handlePress}>
                 <Image source={{ uri: item.picture }} style={styles.image} />
                 <View style={styles.detailContainer}>
                     <Text style={styles.title}>{item.title}</Text>

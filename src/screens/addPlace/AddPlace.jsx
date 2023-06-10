@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import MyInput from '../../components/MyInput'
 import Card from '../../components/Card'
 import MyButton from '../../components/MyButton'
@@ -7,6 +7,7 @@ import MyButton from '../../components/MyButton'
 const AddPlace = () => {
 
     const [value, setValue] = useState("")
+    console.log(value);
 
     const handlePhoto = () => {
         console.log("tomar foto");
