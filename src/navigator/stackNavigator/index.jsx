@@ -9,28 +9,28 @@ const StackNavigator = () => {
 
     const Stack = createStackNavigator()
 
-  return (
+    return (
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen
                 name="Home"
                 component={Home}
-                // options=""
+            // options=""
             />
             <Stack.Screen
                 name="AddPlace"
                 component={AddPlace}
-                // options=""
+            // options=""
             />
             <Stack.Screen
                 name="Detail"
                 component={Detail}
-                // options=""
+            // options=""
             />
         </Stack.Navigator>
-    // <View>
-    //     <Text>Hola</Text>
-    // </View>
-  )
+        // <View>
+        //     <Text>Hola</Text>
+        // </View>
+    )
 }
 
 export default StackNavigator
