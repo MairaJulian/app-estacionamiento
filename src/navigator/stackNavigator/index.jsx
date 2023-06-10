@@ -4,17 +4,26 @@ import { createStackNavigator } from '@react-navigation/stack'
 import AddPlace from './../../screens/addPlace/AddPlace';
 import Home from '../../screens/home/Home';
 import Detail from './../../screens/detail/Detail';
+import { Ionicons } from '@expo/vector-icons'
+
+const Stack = createStackNavigator()
 
 const StackNavigator = () => {
-
-    const Stack = createStackNavigator()
 
   return (
         <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen
                 name="Home"
                 component={Home}
-                // options=""
+                options={
+                    ({navigation})=>({headerRight:()=>
+                    <Ionicons 
+                    name="md-add-circle" 
+                    size={24} 
+                    color="#0079FF" 
+                    onPress={() => navigation.navigate("AddPlace")}
+                    />})
+                }
             />
             <Stack.Screen
                 name="AddPlace"
