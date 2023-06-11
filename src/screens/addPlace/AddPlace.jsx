@@ -5,11 +5,16 @@ import Card from '../../components/Card'
 import MyButton from '../../components/MyButton'
 import { MaterialIcons } from '@expo/vector-icons'
 import { Ionicons } from '@expo/vector-icons'
+import { useDispatch } from 'react-redux'
+import { addPlace } from '../../store/locations/LocationSlice'
+import { CurrentlyDate, CurrentlyHour } from '../../service/currentlyDate'
 
-const AddPlace = () => {
+const AddPlace = ({navigation}) => {
 
     const [value, setValue] = useState("")
     console.log(value);
+
+    const dispatch = useDispatch()
 
     const handlePhoto = () => {
         console.log("tomar foto");
@@ -20,7 +25,24 @@ const AddPlace = () => {
     }
 
     const handleSave = () => {
-        console.log("guardar");
+        console.log("guardar")
+
+        const title = value
+        const picture = 'https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1200x675.jpg'
+        const id = Date.now()
+
+        const place = {
+            date: CurrentlyDate(),
+            horasYMinutos: CurrentlyHour(),
+            id: id,
+            picture: picture,
+            title: title,
+        }
+        console.log(place);
+        dispatch(addPlace(place))
+
+        setValue("")
+        navigation.navigate("Home")
     }
 
     return (
@@ -28,7 +50,7 @@ const AddPlace = () => {
             <Card style={styles.card}>
                 <Text style={styles.text1}>Add new location</Text>
                 <Text style={styles.text2}>Title location</Text>
-                <MyInput style={styles.input} setValue={setValue} value={value}/>
+                <MyInput style={styles.input} setValue={setValue} value={value} />
                 <View style={styles.containePhoto}>
                     <MyButton title={<MaterialIcons name="add-a-photo" size={24} color="black" />} style={styles.photo} onPress={handlePhoto}/>
                 </View>

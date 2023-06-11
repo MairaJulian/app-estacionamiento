@@ -1,12 +1,20 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Card from '../../../components/Card'
-
+import { AntDesign } from '@expo/vector-icons'
+import { useDispatch } from 'react-redux'
+import { deletePlace } from '../../../store/locations/LocationSlice'
 
 const RenderItem = ({ item, navegacionDetail }) => {
+
+    const dispatch = useDispatch()
     
     const handlePress = () => {
         navegacionDetail()
+    }
+
+    const handleDeleteItem = () => {
+        dispatch(deletePlace(item.id))
     }
 
     return (
@@ -18,7 +26,11 @@ const RenderItem = ({ item, navegacionDetail }) => {
                     <Text style={styles.title}>{item.title}</Text>
                     <Text>{item.date}</Text>
                     <Text>{item.id}</Text>
+                    <Text>{item.horasYMinutos}</Text>
                 </View>
+                <TouchableOpacity onPress={handleDeleteItem}>
+                    <AntDesign name="delete" size={24} color="black" />
+                </TouchableOpacity>
             </TouchableOpacity>
         </Card>
     )
