@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 import MyInput from '../../components/MyInput'
 import Card from '../../components/Card'
 import MyButton from '../../components/MyButton'
+import { MaterialIcons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 
 const AddPlace = () => {
 
@@ -27,9 +29,15 @@ const AddPlace = () => {
                 <Text style={styles.text1}>Add new location</Text>
                 <Text style={styles.text2}>Title location</Text>
                 <MyInput style={styles.input} setValue={setValue} value={value}/>
-                <MyButton title={"PHOTO"} style={styles.photo} onPress={handlePhoto}/>
-                <MyButton title={"LOCATION"} style={styles.location} onPress={handleLocation}/>
-                <MyButton title={"SAVE"} style={styles.save} onPress={handleSave}/>
+                <View style={styles.containePhoto}>
+                    <MyButton title={<MaterialIcons name="add-a-photo" size={24} color="black" />} style={styles.photo} onPress={handlePhoto}/>
+                </View>
+                <View style={styles.containeLocation}>
+                    <MyButton title={<Ionicons name="location-sharp" size={24} color="black" />} style={styles.location} onPress={handleLocation}/>
+                </View>
+                <View style={styles.containeSave}>
+                    <MyButton title={"SAVE"} style={styles.save} onPress={handleSave}/>
+                </View>
             </Card>
         </View>
     )
@@ -40,31 +48,53 @@ export default AddPlace
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
-        backgroundColor: "#911F27"
+        // alignItems: "center",
+        backgroundColor: "#8EA7E9"
     },
     card: {
-        margin: 10,
+        margin: 30,
         padding: 15,
-        gap: 10
+        gap: 10, 
+        flex: 1,
     },
     text1: {
-        fontSize: 24,
-        marginBottom: 20
+        flex: 1,
+        fontSize: 30,
+        // marginBottom: 20
     },
     text2: {
-        fontSize: 18
+        
+        fontSize: 22
     },
     input: {
-        marginBottom: 15
+        // flex: 1,
+        marginBottom: 55
+    },
+    containePhoto: {
+        flex: 1,
+        // backgroundColor: "yellow"
     },
     photo: {
-        // marginBottom: 10
+        height: 40,
+        justifyContent: "center",
+        backgroundColor: "#7286D3",
+    },
+    containeLocation: {
+        flex: 1,
+        // backgroundColor: "yellow"
     },
     location: {
-        
+        height: 40,
+        justifyContent: "center",
+        backgroundColor: "#7286D3",
+    },
+    containeSave: {
+        flex: 1,
+        // backgroundColor: "yellow"
     },
     save: {
-
+        height: 40,
+        justifyContent: "center",
+        backgroundColor: "#7286D3"
     }
 })
