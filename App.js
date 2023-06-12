@@ -7,11 +7,11 @@ import StackNavigator from './src/navigator/stackNavigator';
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator/>
+      <StackNavigator />
     </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  
+
 });

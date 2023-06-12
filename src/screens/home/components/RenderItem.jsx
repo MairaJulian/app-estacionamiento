@@ -4,7 +4,7 @@ import Card from '../../../components/Card'
 
 
 const RenderItem = ({ item, navegacionDetail }) => {
-    
+
     const handlePress = () => {
         navegacionDetail()
     }

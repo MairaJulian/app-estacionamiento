@@ -2,14 +2,14 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Card from '../../components/Card';
 
-const Detail = ({route}) => {
+const Detail = ({ route }) => {
     console.log(route.params.item);
-    const {date, picture, title} = route.params.item
+    const { date, picture, title } = route.params.item
     return (
         <View style={styles.container}>
             <Card style={styles.card}>
                 <Text style={styles.text1}>Title: {title}</Text>
-                <Image source={{uri:picture}} style={styles.image}/>
+                <Image source={{ uri: picture }} style={styles.image} />
                 <Text style={styles.text2}>Date: {date}</Text>
             </Card>
         </View>
