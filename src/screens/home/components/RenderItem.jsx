@@ -3,7 +3,7 @@ import React from 'react'
 import Card from '../../../components/Card'
 import { AntDesign } from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
-import { deletePlace } from '../../../store/locations/LocationSlice'
+import { deletePlace, deletePlaceDB } from '../../../store/locations/LocationSlice'
 
 const RenderItem = ({ item, navegacionDetail }) => {
 
@@ -14,7 +14,7 @@ const RenderItem = ({ item, navegacionDetail }) => {
     }
 
     const handleDeleteItem = () => {
-        dispatch(deletePlace(item.id))
+        dispatch(deletePlaceDB(item))
     }
 
     return (
@@ -27,6 +27,8 @@ const RenderItem = ({ item, navegacionDetail }) => {
                     <Text>{item.date}</Text>
                     <Text>{item.id}</Text>
                     <Text>{item.horasYMinutos}</Text>
+                    <Text>{item.latitud}</Text>
+                    <Text>{item.longitud}</Text>
                 </View>
                 <TouchableOpacity onPress={handleDeleteItem}>
                     <AntDesign name="delete" size={24} color="black" />
@@ -44,8 +46,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     image: {
-        width: 60,
-        height: 60,
+        width: 100,
+        height: 100,
         borderRadius: 5,
         resizeMode: 'cover',
     },

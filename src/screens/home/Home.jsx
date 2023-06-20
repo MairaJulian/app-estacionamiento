@@ -4,9 +4,13 @@ import MyButton from '../../components/MyButton'
 import Card from '../../components/Card'
 import MyInput from '../../components/MyInput'
 import RenderItem from './components/RenderItem'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { getFromLocalDBRedux } from '../../store/locations/LocationSlice'
 
 const Home = ({ navigation }) => {
+
+    const dispatch = useDispatch()
 
     const navegacionDetail = (item) => {
         navigation.navigate("Detail", {item})
@@ -17,6 +21,11 @@ const Home = ({ navigation }) => {
 
     const [value, setValue] = useState("")
     // console.log(value);
+
+    useEffect(() => {
+        dispatch(getFromLocalDBRedux())
+    }, [])
+    
 
     return (
         <View style={styles.container}>
