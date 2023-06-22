@@ -4,7 +4,7 @@ import Card from '../../components/Card';
 import MapView from 'react-native-maps';
 import {Marker} from 'react-native-maps';
 
-const Detail = ({route}) => {
+const Detail = ({ route }) => {
     console.log(route.params.item);
     const {date, picture, title, latitud, longitud} = route.params.item
 
