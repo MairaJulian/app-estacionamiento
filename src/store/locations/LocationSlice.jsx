@@ -68,7 +68,6 @@ const LocationSlice = createSlice({
     initialState,
     reducers: {
         addPlace: (state, {payload})=>{
-            // console.log(payload)
             // state.places = state.places.concat(payload)
         },
         eliminarPlace: (state, {payload})=>{
