@@ -25,7 +25,6 @@ const Detail = ({ route }) => {
             Linking.openURL(url);
         };
 
-
     return (
         <View style={styles.container}>
             <ScrollView>

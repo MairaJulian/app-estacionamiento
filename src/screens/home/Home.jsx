@@ -29,8 +29,7 @@ const Home = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            {/* EJEMPLO COMPONENTES INICIO */}
-            <MyButton
+            {/* <MyButton
                 title={"Ejempro boton"}
                 sombra_low_or_high='high'
                 isBold={true}
@@ -39,23 +38,22 @@ const Home = ({ navigation }) => {
 
             <Card sombra_low_or_high='high' >
                 <Text>Ejemplo card</Text>
-            </Card>
+            </Card> */}
 
-            <MyInput value={value} setValue={setValue} />
-            {/* EJEMPLO COMPONENTES FINAL */}
+            {/* <MyInput value={value} setValue={setValue} /> */}
+            
 
-            <Button
+            {/* <Button
                 title="+"
                 onPress={navegacionAddplace}
-
-            />
+            /> */}
 
             <FlatList
                 data={locationSelector}
                 renderItem={(i) => (<RenderItem item={i.item} navigation={navigation} />)}
-                ItemSeparatorComponent={() => <Text>---------</Text>}
+                ItemSeparatorComponent={() => <Text>        </Text>}
                 keyExtractor={i => i.id}
-                style={{ gap: 30 }}
+                style={{ margin: 15 }}
             />
         </View>
     )
@@ -66,5 +64,6 @@ export default Home
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "#8EA7E9",
     },
 })
