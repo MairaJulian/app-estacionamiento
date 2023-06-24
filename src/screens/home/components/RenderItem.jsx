@@ -5,12 +5,12 @@ import { AntDesign } from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
 import { deletePlace, deletePlaceDB } from '../../../store/locations/LocationSlice'
 
-const RenderItem = ({ item, navegacionDetail }) => {
+const RenderItem = ({ item, navigation }) => {
 
     const dispatch = useDispatch()
-    
+
     const handlePress = () => {
-        navegacionDetail()
+        navigation.navigate("Detail", { item: item })
     }
 
     const handleDeleteItem = () => {

@@ -20,12 +20,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Provider store={store}>
-        <StackNavigator/>
+        <StackNavigator />
       </Provider>
     </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  
+
 });
