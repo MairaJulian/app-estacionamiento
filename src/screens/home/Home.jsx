@@ -12,11 +12,11 @@ const Home = ({ navigation }) => {
 
     const dispatch = useDispatch()
 
-    const navegacionDetail = (item) => {
-        navigation.navigate("Detail", {item})
+    const navegacionAddplace = () => {
+        navigation.navigate("AddPlace")
     }
 
-    const locationSelector = useSelector((state)=>state.location.places) 
+    const locationSelector = useSelector((state) => state.location.places)
     // console.log(locationSelector);
 
     const [value, setValue] = useState("")
@@ -29,13 +29,33 @@ const Home = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            {/* EJEMPLO COMPONENTES INICIO */}
+            <MyButton
+                title={"Ejempro boton"}
+                sombra_low_or_high='high'
+                isBold={true}
+                onPress={() => { console.log('presionar boton') }}
+            />
+
+            <Card sombra_low_or_high='high' >
+                <Text>Ejemplo card</Text>
+            </Card>
+
+            <MyInput value={value} setValue={setValue} />
+            {/* EJEMPLO COMPONENTES FINAL */}
+
+            <Button
+                title="+"
+                onPress={navegacionAddplace}
+
+            />
 
             <FlatList
                 data={locationSelector}
-                renderItem={(i)=>(<RenderItem item={i.item} navegacionDetail={()=>navegacionDetail(i.item)}/>)}
+                renderItem={(i) => (<RenderItem item={i.item} navigation={navigation} />)}
                 ItemSeparatorComponent={() => <Text>---------</Text>}
                 keyExtractor={i => i.id}
-                style={{ gap: 30, margin: 15 }}
+                style={{ gap: 30 }}
             />
         </View>
     )
@@ -46,6 +66,5 @@ export default Home
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#8EA7E9"
     },
 })
