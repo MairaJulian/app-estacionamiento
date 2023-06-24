@@ -19,7 +19,6 @@ const RenderItem = ({ item, navigation }) => {
 
     return (
         <Card sombra_low_or_high='low' >
-            {/* <TouchableOpacity style={styles.contain} > */}
             <TouchableOpacity style={styles.contain} onPress={handlePress}>
                 <Image source={{ uri: item.picture }} style={styles.image} />
                 <View style={styles.detailContainer}>
@@ -59,6 +58,5 @@ const styles = StyleSheet.create({
     detailContainer: {
         flex: 1,
         paddingHorizontal: 10,
-        // alignItems: 'flex-end'
     }
 })

@@ -30,17 +30,12 @@ const StackNavigator = () => {
             <Stack.Screen
                 name="AddPlace"
                 component={AddPlace}
-            // options=""
             />
             <Stack.Screen
                 name="Detail"
                 component={Detail}
-            // options=""
             />
         </Stack.Navigator>
-        // <View>
-        //     <Text>Hola</Text>
-        // </View>
     )
 }
 

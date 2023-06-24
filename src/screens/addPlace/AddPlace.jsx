@@ -54,7 +54,6 @@ const AddPlace = ({navigation}) => {
             longitud: longitud
         }
         console.log(place);
-        // dispatch(addPlace(place))
         dispatch(addPlaceDB(place))
         setValue("")
         navigation.navigate("Home")
@@ -88,7 +87,6 @@ export default AddPlace
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // alignItems: "center",
         backgroundColor: "#8EA7E9"
     },
     card: {
@@ -100,19 +98,16 @@ const styles = StyleSheet.create({
     text1: {
         flex: 1,
         fontSize: 30,
-        // marginBottom: 20
     },
     text2: {
         
         fontSize: 22
     },
     input: {
-        // flex: 1,
         marginBottom: 55
     },
     containePhoto: {
         flex: 1,
-        // backgroundColor: "yellow"
     },
     photo: {
         height: 40,
@@ -121,7 +116,6 @@ const styles = StyleSheet.create({
     },
     containeLocation: {
         flex: 1,
-        // backgroundColor: "yellow"
     },
     location: {
         height: 40,
@@ -130,7 +124,6 @@ const styles = StyleSheet.create({
     },
     containeSave: {
         flex: 1,
-        // backgroundColor: "yellow"
     },
     save: {
         height: 40,

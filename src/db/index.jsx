@@ -40,7 +40,6 @@ export const insertPlace = (place) => {
 }
 
 export const deletePlace = async(id, path) => {
-    // const {id} = place
     console.log("Borrando elemento");
 
     const promise = new Promise((resolve, reject) => {

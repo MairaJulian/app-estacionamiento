@@ -1,5 +1,4 @@
 import * as Camera from 'expo-image-picker';
-// import * as Camera2 from 'expo-camera'
 
 export const verifyPermissionsCamera = async () => {
     const { status } = await Camera.requestCameraPermissionsAsync()
@@ -20,5 +19,3 @@ export const verifyPermissionsCamera = async () => {
         return imagePath.assets[0].uri
     }
 }
-
-// export const permissionsCamera = 

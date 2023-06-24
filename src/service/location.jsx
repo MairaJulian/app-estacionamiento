@@ -22,12 +22,3 @@ export const verifyPermissionsLocation = async () => {
         return {latitud, longitud}
     }
 }
-
-// export const getLocation = async () => {
-//     const location = await Location.getCurrentPositionAsync({})
-//     console.log(location);
-//     const latitud = location.latitude
-//     const longitud = location.longitude
-
-//     return {latitud, longitud}
-// }
