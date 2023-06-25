@@ -11,10 +11,6 @@
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
-    "platforms": [
-      "ios",
-      "android"
-    ],
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -35,6 +31,12 @@
         "projectId": "78efd38f-bf4f-4d51-963b-a05aa6be3777"
       }
     },
-    "owner": "maira.julian"
+    "owner": "maira.julian",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/78efd38f-bf4f-4d51-963b-a05aa6be3777"
+    }
   }
 }
