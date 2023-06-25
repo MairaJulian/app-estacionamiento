@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "app-estacionamiento",
+    "name": "Estacionamiento",
     "slug": "app-estacionamiento",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,6 +11,10 @@
       "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -25,6 +29,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "78efd38f-bf4f-4d51-963b-a05aa6be3777"
+      }
+    },
+    "owner": "maira.julian"
   }
 }
