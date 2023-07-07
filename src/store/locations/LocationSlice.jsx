@@ -2,22 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { deletePlace, getFromLocalDB, insertPlace } from "../../db";
 
 const initialState = {
-    places: [
-        // { //BORRAR LUEGO DE CORROBORAR FUNCIONAMIENTO
-        //     id: 11111,
-        //     date: '11/11/1111',
-        //     horasYMinutos: "11:11",
-        //     picture: 'https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen-1200x675.jpg',
-        //     title: 'Titulo 1',
-        // },
-        // {
-        //     id: 22222,
-        //     date: '22/22/2222',
-        //     horasYMinutos: "22:22",
-        //     picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPAS_rNPYq5Bn9Gglol_ClXfKDxRHkMw-DgFB2uLC1w&s',
-        //     title: 'Titulo 2',
-        // }
-    ]
+    places: [],
 }
 
 export const addPlaceDB = createAsyncThunk(

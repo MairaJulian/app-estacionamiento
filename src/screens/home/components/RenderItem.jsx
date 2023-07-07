@@ -26,8 +26,8 @@ const RenderItem = ({ item, navigation }) => {
                     <Text>{item.date}</Text>
                     <Text>{item.id}</Text>
                     <Text>{item.horasYMinutos}</Text>
-                    <Text>{item.latitud}</Text>
-                    <Text>{item.longitud}</Text>
+                    {/* <Text>{item.latitud}</Text>
+                    <Text>{item.longitud}</Text> */}
                 </View>
                 <TouchableOpacity onPress={handleDeleteItem}>
                     <AntDesign name="delete" size={24} color="black" />

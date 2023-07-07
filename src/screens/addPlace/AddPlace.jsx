@@ -74,6 +74,12 @@ const AddPlace = ({navigation}) => {
                 <View style={styles.containeLocation}>
                     <MyButton title={<Ionicons name="location-sharp" size={24} color="black" />} style={styles.location} onPress={handleLocation}/>
                 </View>
+                {
+                    latitud && <Text>Latitud: {latitud}</Text>
+                }
+                {
+                    longitud && <Text>Longitud: {longitud}</Text>
+                }
                 <View style={styles.containeSave}>
                     <MyButton title={"SAVE"} style={styles.save} onPress={handleSave}/>
                 </View>
